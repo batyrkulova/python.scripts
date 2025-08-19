@@ -1,0 +1,130 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #2c3e50;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  width: 320px;
+}
+
+/* Screens */
+.screen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.screen h1,
+.screen h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #f1c40f;
+}
+
+.screen button {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 10px;
+  background: #1abc9c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.screen button:hover {
+  background: #16a085;
+}
+
+#welcome-screen.active,
+#mode-screen.active,
+#game-screen.active {
+  display: flex;
+}
+
+/* Game Board */
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+  position: relative;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #ecf0f1;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 8px;
+  position: relative;
+}
+
+.cell.winner {
+  background: #2ecc71;
+  color: white;
+}
+
+#status {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+#reset-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#reset-btn:hover {
+  background: #d35400;
+}
+
+/* Animated Player Icons */
+
+.player-icon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  animation: pop 0.3s ease-out;
+}
+
+.player-x {
+  background-image: url('assets/player-x.png');
+}
+
+.player-o {
+  background-image: url('assets/player-o.png');
+}
+
+@keyframes pop {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
