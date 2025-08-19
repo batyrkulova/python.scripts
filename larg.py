@@ -1,4 +1,4 @@
-inp = input("Please enter a list: ").split()
+inp = input("Please enter a list of words : ").split()
 
 l = ""
 
