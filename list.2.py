@@ -132,10 +132,8 @@
    "pygments_lexer": "ipython3",
    "version": "3.12.3"
   }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+ }
+
 
 list_of_brands = []
 for i in range(0,3):
