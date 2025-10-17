@@ -42,10 +42,3 @@ jobs:
             {
               "image_tag": "${{ github.sha }}"
             }
-
- 
-
-        
-
-          
-  
