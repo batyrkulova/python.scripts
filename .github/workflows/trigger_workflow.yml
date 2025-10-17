@@ -18,7 +18,7 @@ jobs:
       - name: Build and push 
         uses: docker/build-push-action@v6
         with:
-          context: ./app_code
+          context: .
           push: true
           tags: |
             elsuloda/my_app:${{ github.sha }}
