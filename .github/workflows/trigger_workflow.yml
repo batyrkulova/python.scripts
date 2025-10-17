@@ -3,7 +3,6 @@ on:
   push:
     branches: 
       - main
-    paths: 'app_code/**'
 jobs:
   build_image:
     runs-on: ubuntu-latest
